@@ -23,7 +23,9 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
+
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
@@ -46,18 +48,46 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
 /** end reset css**/
+
+
+
+/** Global **/
+
 body {
-	max-width: 1140px;
 	margin:auto;
 	font-family: 'Work Sans' ;
 	font-size: 14px;
 }
-header {
+
+main {
+	max-width: 1140px;
+	margin: auto;
+}
+
+html {
+	background-color: #fffef8;
+}
+
+#nav-bar {
+	max-width: 1140px;
 	display: flex;
 	justify-content: space-between;
-	margin: 50px 0
+	margin: 50px auto
 }
+
+#edition {
+	display: none;
+	justify-content: center;
+	gap: 1rem;
+	background-color: #000000;
+	color: #FFFFFF;
+	margin: auto;
+	padding: 1.5rem;
+	font-size: 16px;
+}
+
 section {
 	margin: 50px 0
 }
@@ -98,9 +128,30 @@ nav li {
 li:hover {
 	color: #B1663C;
 }
+
+a {
+	color: #000000;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #B1663C;
+}
+
+#log-in {
+	display: inline;
+}
+
+#log-out {
+	display: none;
+}
+
+/** Introduction **/
+
 #introduction {
 	display: flex;
 	align-items: center;
+	margin-bottom: 150px;
 }
 #introduction figure {
 	flex: 1
@@ -121,10 +172,60 @@ li:hover {
 #introduction p {
 	margin-bottom: 0.5em;
 }
+
+/** Portfolio **/
+
+.title-portfolio {
+	width: fit-content;
+	margin: auto;
+	margin-bottom: 50px;
+	position: relative;
+}
+
 #portfolio h2 {
 	text-align: center;
-	margin-bottom: 1em;
 }
+
+#modif {
+	display: none;
+	gap: 0.5rem;
+	cursor: pointer;
+	position: absolute;
+	top: 8px;
+	right: -100px;
+}
+
+#modif:hover {
+	text-decoration: underline;
+}
+
+	/** Filtres **/
+
+.filters {
+	margin-bottom: 2rem;
+	display: flex;
+	flex-direction: row;
+	gap: 1rem;
+	justify-content: center;
+}
+
+.filters button {
+	padding: 0.5rem 1rem;
+	background-color: #fffef8;
+	border: #1D6154 1px solid;
+	border-radius: 20px;
+	font-family: 'Syne';
+	color: #1D6154;
+	cursor: pointer;
+}
+
+.filters button:hover {
+	background-color: #1D6154;
+	color: #FFFFFF;
+}
+
+	/** Gallery **/
+
 .gallery {
 	width: 100%;
 	display: grid;
@@ -135,8 +236,97 @@ li:hover {
 
 .gallery img {
 	width: 100%;
-
 }
+
+	/** Pop-Up **/
+
+.popup-container {
+	display: none;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100vw;
+	height: 100vh;
+	background-color:  rgba(0, 0, 0, 0.2);
+}
+
+.popup-box {
+	margin: auto;
+	margin-top: 25px;
+	padding: 2rem;
+	width: 50%;
+	background-color: #FFFFFF;
+	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+}
+
+#close-mark-1 {
+	font-size: 20px;
+	align-self: flex-end;
+	cursor: pointer;
+}
+
+h3 {
+	font-size: 26px;
+	text-align: center;
+	margin: 0 0 50px 0;
+}
+
+.work-delete {
+	width: 75%;
+	margin: auto;
+}
+
+.work-delete-gallery {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	grid-column-gap: 10px;
+	grid-row-gap: 20px;
+	margin-bottom: 50px;
+}
+
+.work-delete-gallery img {
+	width: 100%;
+}
+
+.work-delete-gallery figure {
+	position: relative;
+}
+
+.work-delete-gallery i {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	background-color: #000000;
+	padding: 4px;
+	border-radius: 2px;
+	color: #FFFFFF;
+	cursor: pointer;
+}
+
+hr {
+	margin: 0;
+}
+
+.popup-box button {
+	font-family: 'Syne';
+	font-weight: 400;
+	font-size: 14px;
+	padding: 0.75rem 2rem;
+	border: none;
+	border-radius: 60px;
+	color: white;
+	background-color: #1D6154;
+	margin : 2rem auto 0 auto;
+	width: fit-content;
+	text-align: center;
+}
+
+
+/** Contact **/
+
 #contact {
 	width: 50%;
 margin: auto;
@@ -180,9 +370,64 @@ input[type="submit"]{
 	border-radius: 60px ;
 }
 
+/** Footer **/
+
 footer nav ul {
 	display: flex;
 	justify-content: flex-end;
 	margin: 2em
 }
 
+/** Login **/
+#login {
+	width: 50%;
+margin: auto;
+}
+#login > * {
+	text-align: center;
+
+}
+#login h2{
+	margin-top: 8rem;
+}
+#login form {
+	text-align: left;
+	margin-top:30px;
+	display: flex;
+	flex-direction: column;
+}
+
+#login input {
+	height: 50px;
+	font-size: 1.2em;
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+#login label {
+	margin: 2em 0 1em 0;
+}
+
+input[type="submit"]{
+	font-family: 'Syne';
+	font-weight: 700;
+	color: white;
+	background-color: #1D6154;
+	margin : 2em auto ;
+	width: 180px;
+	text-align: center;
+	border-radius: 60px ;
+}
+
+#oubli {
+	text-decoration: underline 1px #000000;
+	text-underline-offset: 2px;
+}
+
+#error-message {
+	margin: 0;
+}
+
+#error-text {
+	color: #6e3630;
+	margin-top: 2rem;
+}
