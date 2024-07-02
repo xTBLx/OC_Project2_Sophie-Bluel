@@ -12,7 +12,8 @@
 	crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<meta name="description" content="">
 	<link rel="stylesheet" href="./assets/style.css">
-	<script type="module" src="works.js"></script>
+	<script type="module" src="js/works.js"></script>
+	<script type="module" src="js/popup.js"></script>
 </head>
 <body>
 <header>
@@ -63,13 +64,39 @@
 			<div class="popup-box">
 				<i class="fa-solid fa-xmark" id="close-mark-1"></i>
 				<h3>Galerie Photo</h3>
-				<div class="work-delete">
+				<div class="main-popup-content">
 					<div class="work-delete-gallery">
 
 					</div>
 					<hr width="100%" size="2">
 				</div>
 				<button id="open-button">Ajouter une photo</button>
+			</div>
+		</div>
+
+		<div class="popup-container" id="popup-2">
+			<div class="popup-box">
+				<i class="fa-solid fa-xmark" id="close-mark-2"></i>
+				<h3>Ajout Photo</h3>
+				<div class="main-popup-content" id="add-form">
+					<form action="#" method="post" id="form-add">
+						<section class="work-image">
+							<i class="fa-regular fa-image" id="icon-image"></i>
+							<button id="add-image">+ Ajouter Photo</button>
+							<p id="text-image">jpg, png : 4 Mo max.</p>
+							<img id="preview-image">
+							<input type="file" name="image" id="work-image-input">
+						</section>
+						<label for="title">Titre</label>
+						<input type="text" name="title" id="work-title">
+						<label for="category">Catégorie</label>
+						<select name="category" id="work-categorie">
+							<option value="">--Choisissez une catégorie--</option>
+						</select>
+						<hr width="100%" size="2" id="separation-line">
+						<input type="submit" value="Valider" id="form-add-submit" disabled>
+					</form>
+				</div>
 			</div>
 		</div>
 	</section>

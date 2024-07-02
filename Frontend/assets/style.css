@@ -241,7 +241,6 @@ a:hover {
 	/** Pop-Up **/
 
 .popup-container {
-	display: none;
 	position: fixed;
 	top: 0px;
 	left: 0px;
@@ -261,7 +260,15 @@ a:hover {
 	flex-direction: column;
 }
 
-#close-mark-1 {
+#popup-1 {
+	display: none;
+}
+
+#popup-2 {
+	display: none;
+}
+
+#close-mark-1, #close-mark-2 {
 	font-size: 20px;
 	align-self: flex-end;
 	cursor: pointer;
@@ -273,10 +280,30 @@ h3 {
 	margin: 0 0 50px 0;
 }
 
-.work-delete {
+.main-popup-content {
 	width: 75%;
 	margin: auto;
 }
+
+hr {
+	margin: 0;
+}
+
+.popup-box button {
+	font-family: 'Syne';
+	font-weight: 400;
+	font-size: 14px;
+	padding: 0.75rem 2rem;
+	border: none;
+	border-radius: 60px;
+	color: white;
+	background-color: #1D6154;
+	margin : 2rem auto 0 auto;
+	width: fit-content;
+	text-align: center;
+}
+
+	/** Pop-up de supression **/
 
 .work-delete-gallery {
 	width: 100%;
@@ -306,23 +333,74 @@ h3 {
 	cursor: pointer;
 }
 
-hr {
-	margin: 0;
+#open-button {
+	cursor: pointer;
 }
 
-.popup-box button {
-	font-family: 'Syne';
-	font-weight: 400;
-	font-size: 14px;
-	padding: 0.75rem 2rem;
-	border: none;
-	border-radius: 60px;
-	color: white;
-	background-color: #1D6154;
-	margin : 2rem auto 0 auto;
-	width: fit-content;
-	text-align: center;
-}
+	/** Pop-Up d'ajout de projets **/
+
+	#add-form form {
+		text-align: left;
+		display: flex;
+		flex-direction: column;
+	}
+	
+	#add-form input[type="text"], #add-form input[type="submit"], #work-categorie {
+		height: 50px;
+		font-size: 1.2em;
+		border: none;
+		box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+	}
+
+	#add-form label {
+		margin: 2em 0 1em 0;
+	}
+	
+	#add-form input[type="submit"]{
+		width: 300px;
+		cursor: pointer;
+	}
+
+	.work-image {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 1rem;
+		width: 100%;
+		margin: 0;
+		background-color: #e8f1f6;
+		border-radius: 4px;
+	}
+
+	#icon-image {
+		color: #b9c5cc;
+		font-size: 72px;
+	}
+	
+	#add-image {
+		background-color: #cbd6dc;
+		color: #306685;
+		margin: 0;
+		margin-top: 0.5rem;
+		font-weight: 200;
+		cursor: pointer;
+	}
+
+	#text-image {
+		margin-top: 0.5rem;
+	}
+
+	#work-image-input {
+		display: none;
+	}
+	
+	#separation-line {
+		margin-top: 50px;
+	}
+
+
+
 
 
 /** Contact **/
